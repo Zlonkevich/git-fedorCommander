@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox prefHeight="30.0" prefWidth="200.0" />
+      <HBox prefHeight="30.0" prefWidth="200.0" />
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="600.0">
+         <children>
+
+            <TextField layoutX="7.0" layoutY="20.0" prefHeight="25.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="75.0" />
+            <Button layoutX="541.0" layoutY="29.0" mnemonicParsing="false" text="Search" AnchorPane.bottomAnchor="19.0" AnchorPane.rightAnchor="5.0" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </AnchorPane>
+      <AnchorPane prefHeight="250.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="btnEdit" alignment="TOP_CENTER" layoutX="144.0" layoutY="5.0" mnemonicParsing="false" onAction="#startNavigationButton" prefHeight="25.0" prefWidth="50.0" text="Start" textAlignment="CENTER" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="5.0" />
+            <SplitPane dividerPositions="0.5" prefHeight="200.0" prefWidth="304.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0">
+               <items>
+                  <TableView fx:id="tableLeft" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="nameColumnLeft" prefWidth="160.0" text="Name" />
+                      <TableColumn fx:id="sizeColumnLeft" prefWidth="50.0" text="Size" />
+                      <TableColumn fx:id="pathColumnLeft" prefWidth="60.0" text="Path" />
+                      <TableColumn prefWidth="20.0" text="C3" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="tableRight" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="nameColumnRight" prefWidth="160.0" text="Name" />
+                      <TableColumn fx:id="sizeColumnRight" prefWidth="50.0" text="Size Kb" />
+                      <TableColumn fx:id="pathColumnRight" prefWidth="60.0" text="Path" />
+                      <TableColumn prefWidth="20.0" text="C3" />
+                    </columns>
+                  </TableView>
+               </items>
+            </SplitPane>
+            <Button layoutX="14.0" layoutY="5.0" mnemonicParsing="false" onAction="#leftOutButton" text="&lt;- Out" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+            <Button layoutX="533.0" layoutY="5.0" mnemonicParsing="false" onAction="#rightOutButton" text="&lt;- Out" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="5.0" />
+            <Button layoutX="176.0" layoutY="5.0" mnemonicParsing="false" onAction="#copyButton" text="Copy" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="5.0" />
+            <Button layoutX="240.0" layoutY="5.0" mnemonicParsing="false" onAction="#deleteButton" text="Delete" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="5.0" />
+            <Button layoutX="300.0" layoutY="5.0" mnemonicParsing="false" onAction="#createDirButton" text="Create Dir" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="5.0" />
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <Blend />
+   </effect>
+</VBox>
